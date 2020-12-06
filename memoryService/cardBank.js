@@ -1,12 +1,14 @@
-cardBank = [
-  {
+let frameworks = ['angular2','vue','react','grunt','phantomjs','ember','babel','ionic','gulp','meteor','yeoman','yarn','nodejs','bower','browserify'];
+let cardBank = [];
+
+frameworks.forEach(i =>
+  cardBank.push({
     close: true,
-    framework: "angular2",
+    framework: i,
     complete: false,
     side:"back",
-    framework_img_url:"https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/angular2.png",
-    id: "099099",
-  }
-];
+    framework_img_url:"https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/"+i+".png",
+    id: i,
+  }));
 
 module.exports.cardBank = cardBank;
