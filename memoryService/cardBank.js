@@ -3,10 +3,12 @@ let cardBank = [];
 
 frameworks.forEach(i =>
   cardBank.push({
-    close: true,
-    framework: i,
-    complete: false,
-    side:"back",
+    name: i,
+    key: i,
+    // close: true,
+    // fail: false,
+    // complete: false,
+    // side:"back",
     framework_img_url:"https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/"+i+".png",
     id: i,
   }));

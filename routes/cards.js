@@ -4,7 +4,7 @@ var router = express.Router();
 const cardBankService  = require('../memoryService/cardBank')
 const cardBank = cardBankService.cardBank;
 
-//Get a set of quetions
+// Get a set of quetions
 // router.get('/:number', function (req, res) {
 //     console.log(typeof cardBank)
 //     const cardsNoSolutions = cardBank.sort(() => 0.5 - Math.random()).slice(0, req.params.number)
@@ -19,11 +19,7 @@ const cardBank = cardBankService.cardBank;
 
 //Get the all the cards
 router.get('/', function (req, res) {
-    const cardsNoSolutions = cardBank.map(cardElement => ({
-        card: cardElement.card,
-        answers: cardElement.answers,
-        id: cardElement.id
-    }));
+    const cardsNoSolutions = cardBank;
     res.send(cardsNoSolutions);
 });
 
